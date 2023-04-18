@@ -53,6 +53,30 @@ public class MyStack {
         }
     }
 
+    boolean isStackEmpty() {
+
+        if (top == -1) {
+            return true;
+        }
+
+        return false;
+    }
+
+    boolean isStackFull() {
+
+        if (top == array.size() -1) {
+            return true;
+        }
+
+        return false;
+    }
+
+    void makeStackEmpty() {
+        array.clear();
+        top = -1;
+    }
+
+
     public static void main(String[] args) {
 
         MyStack stack = new MyStack();
@@ -88,6 +112,15 @@ public class MyStack {
                     printMenu();
                     break;
                 case 5:
+                    System.out.println(stack.isStackEmpty());
+                    break;
+                case 6:
+                    System.out.println(stack.isStackFull());
+                    break;
+                case 7:
+                    stack.makeStackEmpty();
+                    break;
+                case 8:
                     i=2;
                     break;
                 default:
@@ -103,7 +136,7 @@ public class MyStack {
 
     static void printMenu() {
         System.out.println("Menu");
-        System.out.println("1. Push\n2. Pop\n3. Peek\n4. PrintStack\n5. Exit");
+        System.out.println("1. Push\n2. Pop\n3. Peek\n4. PrintStack\n5. isStackEmpty\n6. isStackFull\n7. makeStackEmpty\n8. Exit");
     }
 
 }
