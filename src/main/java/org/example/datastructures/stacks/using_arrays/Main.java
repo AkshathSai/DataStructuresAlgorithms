@@ -51,6 +51,7 @@ public class Main {
                     break;
                 case 8:
                     stack.makeStackEmpty();
+                    printMenu();
                     break;
                 case 9:
                     i=2;

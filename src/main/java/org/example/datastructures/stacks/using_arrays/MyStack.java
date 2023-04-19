@@ -1,43 +1,40 @@
 package org.example.datastructures.stacks.using_arrays;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.EmptyStackException;
-import java.util.List;
+import java.util.*;
 
-public class MyStack<T> {
+public class MyStack {
 
     //Stack storage
-    private List<T> array;
+    private Object[] array;
 
     int top = - 1;
 
     public MyStack(int size) {
         //array = new ArrayList<>(size);
-        array = new ArrayList<>(Collections.nCopies(size, null));
+        array = new Object[size];
     }
 
     /**Push an Element into the Stack*/
-    public void push(T valueToPush) {
+    public void push(Object valueToPush) {
 
         if (isStackFull()) {
             System.out.println("Stack Overflow!!!");
         } else {
             top++;
-            array.set(top, valueToPush);
+            array[top] = valueToPush;
             System.out.println(valueToPush + " Pushed to Stack!");
         }
     }
 
     /** Remove and obtain the element from Stack */
-    public T pop() {
+    public Object pop() {
 
         if (top == -1) {
             System.out.println("Underflow");
             throw new EmptyStackException();
         }
 
-        return array.remove(top--);
+        return array[top--] = null;
     }
 
     void printStack() {
@@ -53,13 +50,13 @@ public class MyStack<T> {
     }
 
     /**Gets Recently Inserted Element*/
-    T peek() {
+    Object peek() {
 
         if (top == -1) {
             System.out.println("Empty Stack!");
             return null;
         } else {
-            return array.get(top);
+            return array[top];
         }
 
     }
@@ -69,12 +66,15 @@ public class MyStack<T> {
     }
 
     boolean isStackFull() {
-       return (top == array.size() - 1);
+       return (top == array.length - 1);
     }
 
     void makeStackEmpty() {
         top = -1;
-        array.clear();
+        //Arrays.fill(array, null);
+        for (int i = 0; i < array.length; i++) {
+            array[i] = null;
+        }
     }
 
 }
