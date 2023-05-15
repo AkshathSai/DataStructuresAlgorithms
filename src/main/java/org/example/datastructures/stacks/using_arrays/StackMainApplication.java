@@ -2,7 +2,7 @@ package org.example.datastructures.stacks.using_arrays;
 
 import java.util.Scanner;
 
-public class Main {
+public class StackMainApplication {
 
     public static void main(String[] args) {
 

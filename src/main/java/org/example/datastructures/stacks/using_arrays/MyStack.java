@@ -10,7 +10,6 @@ public class MyStack {
     int top = - 1;
 
     public MyStack(int size) {
-        //array = new ArrayList<>(size);
         array = new Object[size];
     }
 
