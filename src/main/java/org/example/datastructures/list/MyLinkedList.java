@@ -1,6 +1,6 @@
 package org.example.datastructures.list;
 
-public class MyList<E> {
+public class MyLinkedList<E> {
 
     private Node<E> headNode;
     private int size;
@@ -44,7 +44,7 @@ public class MyList<E> {
 
     }
 
-    public void display(MyList<E> list) {
+    public void display(MyLinkedList<E> list) {
 
         Node<E> currentNode = list.headNode;
 
@@ -55,7 +55,7 @@ public class MyList<E> {
 
     }
 
-    public MyList() {
+    public MyLinkedList() {
         //(default) no argument constructor
     }
 

@@ -4,7 +4,7 @@ public class MyListApplication {
 
     public static void main(String[] args) {
 
-        MyList<Integer> integerList = new MyList<>();
+        MyLinkedList<Integer> integerList = new MyLinkedList<>();
 
         integerList.insert(15);
         integerList.insert(25);
