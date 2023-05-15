@@ -1,4 +1,4 @@
-package org.example.datastructures.stacks.using_arrays;
+package org.example.stacks.using_arrays;
 
 import java.util.Scanner;
 

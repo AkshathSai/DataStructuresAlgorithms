@@ -1,4 +1,4 @@
-package org.example.datastructures.list;
+package org.example.list;
 
 public class MyListApplication {
 
