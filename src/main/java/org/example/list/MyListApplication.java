@@ -6,12 +6,13 @@ public class MyListApplication {
 
         MyLinkedList<Integer> integerList = new MyLinkedList<>();
 
-        integerList.insert(15);
-        integerList.insert(25);
-        integerList.insert(35);
-        integerList.insert(45);
+        integerList.insertEnd(15);
+        integerList.insertEnd(25);
+        integerList.insertEnd(35);
+        integerList.insertEnd(45);
 
         integerList.display(integerList);
+
 
     }
 }

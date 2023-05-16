@@ -25,6 +25,10 @@ public class Node<E> {
         //(default) no argument constructor
     }
 
+    public Node(E data) {
+        this.data = data;
+    }
+
     public Node(E data, Node next) {
         this.data = data;
         this.next = next;
@@ -32,7 +36,7 @@ public class Node<E> {
 
     @Override
     public String toString() {
-        return "[Data value: " + data + ", Next value: " + next + "] \n";
+        return "[Data value: " + data + ", Next value: " + next + "]\n";
     }
 
 }

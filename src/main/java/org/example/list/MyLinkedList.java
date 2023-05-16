@@ -5,12 +5,12 @@ public class MyLinkedList<E> {
     private Node<E> headNode;
     private int size;
 
-    public boolean insert(E data) {
+    public boolean insertEnd(E data) {
 
         /**
          * Create new node
          */
-        Node<E> newNode = new Node<>(data, null);
+        Node<E> newNode = new Node<>(data);
 
         /**
          * Validate if a new node has been created
@@ -21,28 +21,62 @@ public class MyLinkedList<E> {
 
         /**
          * If the LinkedList is empty
-         * insert new Node as head node
+         * insert new Node as head node/First node
          * */
         if (headNode == null) {
+            newNode.setNext(null);
             headNode = newNode;
+            size++;
+            return true;
         } else {
 
-            Node<E> currentNode = headNode;
+            /**
+             * Search for the Last node, T
+             */
+            Node<E> tempNode = headNode;
 
             /**
              * Traversing to the end of the current nodes' next
              */
-            while (currentNode.getNext() != null) {
-                currentNode = currentNode.getNext();
+            while (tempNode.getNext() != null) {
+                tempNode = tempNode.getNext();
             }
 
-            currentNode.setNext(newNode);
+            /**
+             * Link the new node with Last node, T
+             */
+            newNode.setNext(tempNode.getNext());
+            tempNode.setNext(newNode);
 
         }
+
+        size++;
+
+        System.out.println(headNode);
 
         return true;
 
     }
+
+    public boolean insertFront(E data) {
+
+        /**
+         * Create new node
+         */
+        Node<E> newNode = new Node<>(data, null);
+
+        /**
+         * Validate if a new node has been created
+         */
+        if (newNode == null) {
+            return false;
+        }
+
+        size++;
+
+        return true;
+    }
+
 
     public void display(MyLinkedList<E> list) {
 
