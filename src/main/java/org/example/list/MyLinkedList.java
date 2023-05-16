@@ -3,14 +3,47 @@ package org.example.list;
 public class MyLinkedList<E> {
 
     private Node<E> headNode;
-    private int size;
+    private int size = 0;
+
+    public boolean insertFront(E data) {
+
+        /**
+         * Create new node
+         */
+        Node<E> newNode = new Node<>();
+
+        /**
+         * Validate if a new node has been created
+         */
+        if (newNode == null) {
+            return false;
+        }
+
+        /**
+         * Fill the data field of new node
+         */
+        newNode.setData(data);
+
+        /**
+         * Link the new node with first node/head node
+         */
+        newNode.setNext(headNode);
+        headNode = newNode;
+
+        size++;
+
+        System.out.println("Current LinkedList: \n" + headNode);
+
+        return true;
+
+    }
 
     public boolean insertEnd(E data) {
 
         /**
          * Create new node
          */
-        Node<E> newNode = new Node<>(data);
+        Node<E> newNode = new Node<>();
 
         /**
          * Validate if a new node has been created
@@ -18,6 +51,11 @@ public class MyLinkedList<E> {
         if(newNode == null) {
             return false;
         }
+
+        /**
+         * Fill the data field of new node
+         */
+        newNode.setData(data);
 
         /**
          * If the LinkedList is empty
@@ -28,53 +66,32 @@ public class MyLinkedList<E> {
             headNode = newNode;
             size++;
             return true;
-        } else {
-
-            /**
-             * Search for the Last node, T
-             */
-            Node<E> tempNode = headNode;
-
-            /**
-             * Traversing to the end of the current nodes' next
-             */
-            while (tempNode.getNext() != null) {
-                tempNode = tempNode.getNext();
-            }
-
-            /**
-             * Link the new node with Last node, T
-             */
-            newNode.setNext(tempNode.getNext());
-            tempNode.setNext(newNode);
-
         }
+
+        /**
+         * Search for the Last node, T
+         */
+        Node<E> tempNode = headNode;
+
+        /**
+         * Traversing to the end of the current nodes' next
+         */
+        while (tempNode.getNext() != null) {
+            tempNode = tempNode.getNext();
+        }
+
+        /**
+         * Link the new node with Last node, T
+         */
+        newNode.setNext(tempNode.getNext());
+        tempNode.setNext(newNode);
 
         size++;
 
-        System.out.println(headNode);
+        System.out.println("Current LinkedList \n" + headNode);
 
         return true;
 
-    }
-
-    public boolean insertFront(E data) {
-
-        /**
-         * Create new node
-         */
-        Node<E> newNode = new Node<>(data, null);
-
-        /**
-         * Validate if a new node has been created
-         */
-        if (newNode == null) {
-            return false;
-        }
-
-        size++;
-
-        return true;
     }
 
 

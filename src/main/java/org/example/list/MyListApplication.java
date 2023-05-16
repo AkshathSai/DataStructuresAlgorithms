@@ -10,6 +10,7 @@ public class MyListApplication {
         integerList.insertEnd(25);
         integerList.insertEnd(35);
         integerList.insertEnd(45);
+        integerList.insertFront(5);
 
         integerList.display(integerList);
 
