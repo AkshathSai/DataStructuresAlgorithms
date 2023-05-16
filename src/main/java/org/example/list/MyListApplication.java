@@ -14,6 +14,16 @@ public class MyListApplication {
 
         integerList.display(integerList);
 
+        System.out.println("Deleting Front element: " + integerList.deleteFront());
 
+        integerList.display(integerList);
+
+        System.out.println("Deleting Front element: " + integerList.deleteFront());
+
+        integerList.display(integerList);
+
+        System.out.println("Deleting End element: " + integerList.deleteEnd());
+
+        integerList.display(integerList);
     }
 }
