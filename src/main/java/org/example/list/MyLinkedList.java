@@ -147,7 +147,9 @@ public class MyLinkedList<E> {
 
         while (tempNode.getNext() != null) {
             parentNode = tempNode;
+            //System.out.println("Parent Node \n" + parentNode);
             tempNode = tempNode.getNext();
+            //System.out.println("Temp Node \n" + tempNode);
         }
 
         /**
