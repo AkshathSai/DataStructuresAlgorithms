@@ -55,6 +55,7 @@ public class MyListApplication {
                     } else {
                         System.out.println(result);
                     }
+                    printMenu();
                     break;
                 case 7:
                     list.display(list);
