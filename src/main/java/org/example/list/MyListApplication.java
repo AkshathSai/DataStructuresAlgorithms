@@ -59,6 +59,7 @@ public class MyListApplication {
                     break;
                 case 7:
                     list.display(list);
+                    printMenu();
                     break;
                 case 8:
                     list.displayLinkStructure();
