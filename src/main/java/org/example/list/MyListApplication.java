@@ -1,29 +1,83 @@
 package org.example.list;
 
+import java.util.Scanner;
+
 public class MyListApplication {
 
     public static void main(String[] args) {
 
-        MyLinkedList<Integer> integerList = new MyLinkedList<>();
+        System.out.println("Welcome to My Singly LinkedList! (Using Java Class Nodes)");
+        printMenu();
+        MySinglyLinkedList list = null;
+        Scanner sc = new Scanner(System.in);
 
-        integerList.insertEnd(15);
-        integerList.insertEnd(25);
-        integerList.insertEnd(35);
-        integerList.insertEnd(45);
-        integerList.insertFront(5);
+        int i = 1;
 
-        integerList.display(integerList);
+        Object obj;
 
-        System.out.println("Deleting Front element: " + integerList.deleteFront());
+        while (i == 1) {
 
-        integerList.display(integerList);
+            int choice = sc.nextInt();
 
-        System.out.println("Deleting Front element: " + integerList.deleteFront());
+            switch (choice) {
 
-        integerList.display(integerList);
+                case 1:
+                    list = new MySinglyLinkedList();
+                    System.out.println("New LinkedList initialized successfully...");
+                    printMenu();
+                    break;
+                case 2:
+                    System.out.println("Enter a new element to be added at the front of the List");
+                    obj = sc.next();
+                    list.insertFront(obj);
+                    printMenu();
+                    break;
+                case 3:
+                    System.out.println("Enter a new element to be added at the end of the List");
+                    obj = sc.next();
+                    list.insertEnd(obj);
+                    printMenu();
+                    break;
+                case 4:
+                    System.out.println("Deleted Front element: " + list.deleteFront());
+                    printMenu();
+                    break;
+                case 5:
+                    System.out.println("Deleted End element: " + list.deleteEnd());
+                    printMenu();
+                    break;
+                case 6:
+                    System.out.println("Enter a specific element to search for");
+                    obj = sc.next();
+                    int result = list.search(obj);
+                    if (result == -1) {
+                        System.out.println("Element not found!");
+                    } else {
+                        System.out.println(result);
+                    }
+                    break;
+                case 7:
+                    list.display(list);
+                    break;
+                case 8:
+                    list.displayLinkStructure();
+                    printMenu();
+                    break;
+                case 9:
+                    i=2;
+                    break;
+                default:
+                    System.out.println("Invalid Choice!\nPlease check the Menu Options & try again...");
+                    printMenu();
+                    break;
+            }
 
-        System.out.println("Deleting End element: " + integerList.deleteEnd());
-
-        integerList.display(integerList);
+        }
     }
+
+    static void printMenu() {
+        System.out.println("Menu");
+        System.out.println("1. Create an Empty LinkedList\n2. InsertFront\n3. InsertEnd\n4. DeleteFront\n5. DeleteEnd\n6. Search\n7. Display Elements\n8. Display Link Structure\n9. Exit");
+    }
+
 }

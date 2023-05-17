@@ -1,6 +1,6 @@
 package org.example.list;
 
-public class MyLinkedList<E> {
+public class MySinglyLinkedList<E> {
 
     private Node<E> headNode;
     private int size = 0;
@@ -179,7 +179,7 @@ public class MyLinkedList<E> {
         return deletedElement;
     }
 
-    public void display(MyLinkedList<E> list) {
+    public void display(MySinglyLinkedList<E> list) {
 
         Node<E> currentNode = list.headNode;
 
@@ -192,7 +192,28 @@ public class MyLinkedList<E> {
 
     }
 
-    public MyLinkedList() {
+    public void displayLinkStructure() {
+        System.out.println("Current LinkedList \n" + headNode);
+    }
+
+    public int search(E element) {
+
+        Node<E> currentNode = headNode;
+
+        int index = 0;
+
+        while (currentNode != null) {
+            if (currentNode.getData().equals(element)) {
+                return index;
+            }
+            currentNode = currentNode.getNext();
+            index++;
+        }
+
+        return -1;
+    }
+
+    public MySinglyLinkedList() {
         //(default) no argument constructor
     }
 
