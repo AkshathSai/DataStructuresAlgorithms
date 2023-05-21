@@ -1,4 +1,4 @@
-package org.example.list;
+package org.example.list.singlylinkedlist;
 
 import java.util.Scanner;
 
@@ -68,6 +68,19 @@ public class MyListApplication {
                 case 9:
                     i=2;
                     break;
+                case 10:
+                    obj = sc.next();
+                    list.delete(obj);
+                    printMenu();
+                    break;
+                case 11:
+                    System.out.println("Enter the Index where to be inserted at");
+                    int index = sc.nextInt();
+                    System.out.println("Enter the element to be inserted");
+                    obj = sc.next();
+                    list.insertAt(index ,obj);
+                    printMenu();
+                    break;
                 default:
                     System.out.println("Invalid Choice!\nPlease check the Menu Options & try again...");
                     printMenu();
@@ -79,7 +92,7 @@ public class MyListApplication {
 
     static void printMenu() {
         System.out.println("Menu");
-        System.out.println("1. Create an Empty LinkedList\n2. InsertFront\n3. InsertEnd\n4. DeleteFront\n5. DeleteEnd\n6. Search\n7. Display Elements\n8. Display Link Structure\n9. Exit");
+        System.out.println("1. Create an Empty LinkedList\n2. InsertFront\n3. InsertEnd\n4. DeleteFront\n5. DeleteEnd\n6. Search\n7. Display Elements\n8. Display Link Structure\n9. Exit\n10. Delete\n11. InsertAt");
     }
 
 }

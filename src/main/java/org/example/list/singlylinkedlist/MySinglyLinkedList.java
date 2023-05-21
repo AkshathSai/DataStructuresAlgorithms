@@ -1,4 +1,4 @@
-package org.example.list;
+package org.example.list.singlylinkedlist;
 
 public class MySinglyLinkedList<E> {
 
@@ -91,6 +91,58 @@ public class MySinglyLinkedList<E> {
         System.out.println("Current LinkedList \n" + headNode);
 
         return true;
+
+    }
+
+    public boolean insertAt(int index,E data) {
+
+        /*if (index < size) {
+            System.out.println("Index out of bounds");
+            return false;
+        }*/
+
+        Node<E> currentNode = headNode;
+        Node<E> newNode = new Node<>();
+
+        for (int i = 0; i < index; i++) {
+            currentNode = currentNode.getNext();
+        }
+
+        newNode.setData(data);
+        newNode.setNext(currentNode);
+
+        currentNode.setNext(newNode);
+
+        size++;
+
+        return true;
+    }
+
+    public E delete(E data) {
+
+        if (headNode == null) {
+            System.out.println("List is empty!");
+            return null;
+        }
+
+        Node<E> currentNode = headNode;
+        Node<E> previousNode = null;
+
+        int index = search(data);
+
+        if (index != -1) {
+
+          for (int i = 0; i < index; i++) {
+              previousNode = currentNode;
+              currentNode = currentNode.getNext();
+          }
+
+          previousNode.setNext(currentNode.getNext());
+
+          size--;
+        }
+
+        return null;
 
     }
 
