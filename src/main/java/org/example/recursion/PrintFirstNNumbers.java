@@ -1,6 +1,6 @@
 package org.example.recursion;
 
-public class PrintFirst5Numbers {
+public class PrintFirstNNumbers {
 
     public static void main(String[] args) {
 
