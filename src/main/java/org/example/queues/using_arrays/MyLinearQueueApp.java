@@ -24,6 +24,7 @@ public class MyLinearQueueApp {
         LOGGER.info("Linear String Queue EnQ DEF: " + stringMyLinearQueue.EnQ("DEF"));
         LOGGER.info("Linear String Queue: " + stringMyLinearQueue);
         LOGGER.info("Linear String Queue DeQ: " + stringMyLinearQueue.DeQ());
+        LOGGER.info("Linear String Queue Post DeQ: " + stringMyLinearQueue);
         LOGGER.info("Linear String Queue EnQ XYZ: " + stringMyLinearQueue.EnQ("XYZ"));
         LOGGER.info("Linear String Queue: " + stringMyLinearQueue);
     }
