@@ -39,11 +39,8 @@ public class MyDoublyLinkedList<E> {
 
     }
 
-
     public void displayLinkStructure() {
-
         System.out.println(headNode);
-
     }
 
     public MyDoublyLinkedList() {
