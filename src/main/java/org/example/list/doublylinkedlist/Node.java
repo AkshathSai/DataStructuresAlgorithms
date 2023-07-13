@@ -1,57 +1,44 @@
 package org.example.list.doublylinkedlist;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.experimental.Accessors;
+
+@Getter
+@Setter
+@Accessors(chain = true)
+@NoArgsConstructor
 public class Node<E> {
 
-    private Node prev;
+    private Node<E> prev;
     private E data;
-    private Node next;
+    private Node<E> next;
 
-    public Node getPrev() {
-        return prev;
-    }
-
-    public void setPrev(Node prev) {
-        this.prev = prev;
-    }
-
-    public E getData() {
-        return data;
-    }
-
-    public void setData(E data) {
-        this.data = data;
-    }
-
-    public Node getNext() {
-        return next;
-    }
-
-    public void setNext(Node next) {
-        this.next = next;
-    }
-
-    public Node() {
-        //(default) no args constructor
-    }
-
-    public Node(Node prev, E data, Node next) {
-        this.prev = prev;
-        this.data = data;
-        this.next = next;
+    public Node(E value) {
+        this.data = value;
+        this.prev = null;
+        this.next = null;
     }
 
     @Override
     public String toString() {
-        return "Node{" +
-                "prev=" + prev +
-                ", data=" + data +
-                ", next=" + next +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append("[ Previous: ");
+        if (prev != null) {
+            sb.append(prev.data);
+        } else {
+            sb.append("null");
+        }
+        sb.append(" Data value: ").append(data);
+        sb.append(" Next: ");
+        if (next != null) {
+            sb.append(next.data);
+        } else {
+            sb.append("null");
+        }
+        sb.append(" ]");
+        return sb.toString();
     }
-
-    /* @Override
-    public String toString() {
-        return "[Prev: " + getPrev() + " Data: " + getData() + " Next: " + getNext() + "] ";
-    }*/
 
 }

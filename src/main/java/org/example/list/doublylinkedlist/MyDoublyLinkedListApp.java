@@ -7,7 +7,7 @@ public class MyDoublyLinkedListApp {
         MyDoublyLinkedList<Object> myDoublyLinkedList = new MyDoublyLinkedList<>();
         myDoublyLinkedList.InsertFront(10);
         myDoublyLinkedList.InsertFront(15);
-        //myDoublyLinkedList.InsertFront(30);
+        myDoublyLinkedList.InsertFront(30);
         myDoublyLinkedList.displayLinkStructure();
     }
 

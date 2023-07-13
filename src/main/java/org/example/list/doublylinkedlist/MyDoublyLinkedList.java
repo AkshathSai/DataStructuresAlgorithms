@@ -2,45 +2,41 @@ package org.example.list.doublylinkedlist;
 
 public class MyDoublyLinkedList<E> {
 
-    private Node<E> headNode;
-    private Node<E> tailNode;
+    private Node<E> headNode = null;
+    private Node<E> tailNode = null;
     private int size = 0;
 
     public boolean InsertFront(E data) {
 
-        Node<E> newNode = new Node<>();
-
-        if (newNode == null) {
-            System.out.println("Error during Node Initialization");
-            return false;
-        }
-
-        //newNode.setPrev(null);
-        newNode.setData(data);
-        //newNode.setNext(null);
+        Node<E> newNode = new Node<>(data);
 
         if (headNode == null) {
             headNode = newNode;
+            tailNode = newNode;
             size++;
             return true;
         }
 
-        headNode.setPrev(newNode);
         newNode.setNext(headNode);
+        headNode.setPrev(newNode);
         headNode = newNode;
-        tailNode = newNode;
         size++;
-
-        System.out.println("Current LinkedList: \n" + headNode);
-
-        //displayLinkStructure();
 
         return true;
 
     }
 
     public void displayLinkStructure() {
-        System.out.println(headNode);
+        System.out.println("Current LinkedList: ");
+        Node current = headNode;
+        while (current != null) {
+            System.out.print(current + " ");
+            current = current.getNext();
+        }
+        System.out.println();
+
+        System.out.println("Head Node: " + headNode);
+        System.out.println("Tail Node: " + tailNode);
     }
 
     public MyDoublyLinkedList() {
