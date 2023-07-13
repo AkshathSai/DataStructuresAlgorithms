@@ -7,16 +7,16 @@ import lombok.experimental.Accessors;
 @Data
 @Accessors(chain = true)
 @NoArgsConstructor
-public class Node<T> {
+public class Node<E> {
 
-    private T data;
-    private Node<T> leftChild;
-    private Node<T> rightChild;
+    private E data;
+    private Node<E> leftChild;
+    private Node<E> rightChild;
 
-    public Node(T value) {
+    public Node(E value) {
         this.data = value;
-        leftChild = null;
-        rightChild = null;
+        this.leftChild = null;
+        this.rightChild = null;
     }
 
 }
