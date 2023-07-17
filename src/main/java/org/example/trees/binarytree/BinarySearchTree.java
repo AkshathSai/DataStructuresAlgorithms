@@ -23,7 +23,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
     }
 
     public void insert(E value) {
-        this.rootNode = insertRecursively(rootNode, value);
+        this.rootNode = insertRecursively(this.rootNode, value);
     }
 
     public Node<E> insertRecursively(Node<E> currentNode, E value) {
