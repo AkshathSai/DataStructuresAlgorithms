@@ -43,6 +43,27 @@ public class BinarySearchTree<E extends Comparable<E>> {
         return currentNode;
     }
 
+    public E lookup(E value) {
+        return lookupRecursively(this.rootNode, value);
+    }
+
+    private E lookupRecursively(Node<E> currentNode, E value) {
+
+        int compare = value.compareTo(currentNode.getData());
+
+        if (compare == 0) {
+            return currentNode.getData();
+        } else if (compare < 0) { //Left
+            return lookupRecursively(currentNode.getLeftChild(), value);
+        } else if (compare > 0) { //Right
+            return lookupRecursively(currentNode.getRightChild(), value);
+        } else {
+            LOGGER.info("Element not found!");
+        }
+
+        return null;
+    }
+
     public void displayLinkStructure() {
         LOGGER.debug("BST:\n" + rootNode);
     }
