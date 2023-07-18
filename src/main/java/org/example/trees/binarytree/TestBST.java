@@ -15,6 +15,11 @@ public class TestBST {
         bst.insert(11);
         LOGGER.info("Is BST empty: " + bst.isEmpty());
         bst.displayLinkStructure();
+        LOGGER.info("Lookup: " + bst.lookup(11));
+        LOGGER.info("Lookup: " + bst.lookup(45));
+        LOGGER.info("Lookup: " + bst.lookup(43));
+        LOGGER.info("Delete: " + bst.delete(11));
+        bst.displayLinkStructure();
     }
 
 }

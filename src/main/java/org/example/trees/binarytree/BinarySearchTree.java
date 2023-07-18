@@ -44,28 +44,55 @@ public class BinarySearchTree<E extends Comparable<E>> {
     }
 
     public E lookup(E value) {
-        return lookupRecursively(this.rootNode, value);
-    }
 
-    private E lookupRecursively(Node<E> currentNode, E value) {
-
-        int compare = value.compareTo(currentNode.getData());
-
-        if (compare == 0) {
-            return currentNode.getData();
-        } else if (compare < 0) { //Left
-            return lookupRecursively(currentNode.getLeftChild(), value);
-        } else if (compare > 0) { //Right
-            return lookupRecursively(currentNode.getRightChild(), value);
-        } else {
-            LOGGER.info("Element not found!");
+        Node<E> node = lookupRecursively(this.rootNode, value);
+        if (node != null) {
+            return node.getData();
         }
 
         return null;
     }
 
+    private Node<E> lookupRecursively(Node<E> currentNode, E value) {
+
+        if (currentNode == null) {
+            return null;
+        }
+
+        int compare = value.compareTo(currentNode.getData());
+
+        if (compare == 0) {
+            return currentNode;
+        } else if (compare < 0) { //Left
+            LOGGER.debug(value + " < " + currentNode.getData() + " Looking in the left subtree");
+            return lookupRecursively(currentNode.getLeftChild(), value);
+        } else if (compare > 0) { //Right
+            LOGGER.debug(value + " > " + currentNode.getData() + " Looking in the right subtree");
+            return lookupRecursively(currentNode.getRightChild(), value);
+        }
+
+        LOGGER.info("Element not found!");
+
+        return null;
+    }
+
+    public boolean delete(E value) {
+
+       Node<E> currentNode = lookupRecursively(this.rootNode, value);
+
+        if (currentNode != null) {
+            currentNode = null;
+            return true;
+        } else {
+          LOGGER.info("Element does not exist!!");
+        }
+
+        return false;
+    }
+
     public void displayLinkStructure() {
         LOGGER.debug("BST:\n" + rootNode);
     }
+
 
 }
