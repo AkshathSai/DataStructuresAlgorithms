@@ -18,7 +18,14 @@ public class TestBST {
         LOGGER.info("Lookup: " + bst.lookup(11));
         LOGGER.info("Lookup: " + bst.lookup(45));
         LOGGER.info("Lookup: " + bst.lookup(43));
-        LOGGER.info("Delete: " + bst.delete(11));
+        LOGGER.info("Delete 11 ");
+        bst.delete(11);
+        bst.displayLinkStructure();
+        LOGGER.info("Delete 45: ");
+        bst.delete(45);
+        bst.displayLinkStructure();
+        LOGGER.info("Delete 47: ");
+        bst.delete(47);
         bst.displayLinkStructure();
     }
 

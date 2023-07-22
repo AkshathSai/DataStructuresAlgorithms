@@ -26,7 +26,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
         this.rootNode = insertRecursively(this.rootNode, value);
     }
 
-    public Node<E> insertRecursively(Node<E> currentNode, E value) {
+    private Node<E> insertRecursively(Node<E> currentNode, E value) {
 
         if (currentNode == null) {
             return new Node<>(value);
@@ -56,6 +56,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
     private Node<E> lookupRecursively(Node<E> currentNode, E value) {
 
         if (currentNode == null) {
+            LOGGER.info("Element not found!");
             return null;
         }
 
@@ -71,28 +72,36 @@ public class BinarySearchTree<E extends Comparable<E>> {
             return lookupRecursively(currentNode.getRightChild(), value);
         }
 
-        LOGGER.info("Element not found!");
-
         return null;
     }
 
-    public boolean delete(E value) {
+    public void delete(E value) {
+        deleteRecursively(this.rootNode, value);
+    }
 
-       Node<E> currentNode = lookupRecursively(this.rootNode, value);
+    private Node<E> deleteRecursively(Node<E> currentNode, E value) {
 
-        if (currentNode != null) {
-            currentNode = null;
-            return true;
-        } else {
-          LOGGER.info("Element does not exist!!");
+        if (currentNode == null) {
+            return null;
         }
 
-        return false;
+        int compareTo = value.compareTo(currentNode.getData());
+
+        if (compareTo < 0) { //Left
+            currentNode.setLeftChild(deleteRecursively(currentNode.getLeftChild(), value));
+        } else if (compareTo > 0) { //Right
+            currentNode.setRightChild(deleteRecursively(currentNode.getRightChild(), value));
+        } else {
+            if (currentNode.getLeftChild() == null && currentNode.getRightChild() == null) {
+                return null;
+            }
+        }
+
+        return currentNode;
     }
 
     public void displayLinkStructure() {
         LOGGER.debug("BST:\n" + rootNode);
     }
-
 
 }
