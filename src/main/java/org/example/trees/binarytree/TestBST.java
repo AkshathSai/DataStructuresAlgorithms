@@ -27,6 +27,13 @@ public class TestBST {
         LOGGER.info("Delete 47: ");
         bst.delete(47);
         bst.displayLinkStructure();
+        bst.insert(21);
+        bst.insert(67);
+        bst.insert(5);
+        bst.insert(29);
+        bst.displayLinkStructure();
+        LOGGER.info("Minimum: " + bst.getMinimum());
+        LOGGER.info("Maximum: " + bst.getMaximum());
     }
 
 }

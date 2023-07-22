@@ -104,4 +104,36 @@ public class BinarySearchTree<E extends Comparable<E>> {
         LOGGER.debug("BST:\n" + rootNode);
     }
 
+    public E getMinimum() {
+
+        if (this.rootNode == null) {
+            LOGGER.info("No Elements found in the Tree");
+            return null;
+        }
+
+        Node<E> currentNode = this.rootNode;
+
+        while (currentNode.getLeftChild() != null) {
+            currentNode = currentNode.getLeftChild();
+        }
+
+        return currentNode.getData();
+    }
+
+    public E getMaximum() {
+
+        if (this.rootNode == null) {
+            LOGGER.info("No Elements found in the Tree");
+            return null;
+        }
+
+        Node<E> currentNode = this.rootNode;
+
+        while (currentNode.getRightChild() != null) {
+            currentNode = currentNode.getRightChild();
+        }
+
+        return currentNode.getData();
+    }
+
 }
