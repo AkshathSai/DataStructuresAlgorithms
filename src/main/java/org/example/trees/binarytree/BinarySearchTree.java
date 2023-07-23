@@ -92,12 +92,35 @@ public class BinarySearchTree<E extends Comparable<E>> {
         } else if (compareTo > 0) { //Right
             currentNode.setRightChild(deleteRecursively(currentNode.getRightChild(), value));
         } else {
+            //For deleting a Node with no children
             if (currentNode.getLeftChild() == null && currentNode.getRightChild() == null) {
                 return null;
+            } else if (currentNode.getLeftChild() == null) {
+                currentNode = currentNode.getRightChild();
+            } else if (currentNode.getRightChild() == null) {
+                currentNode = currentNode.getLeftChild();
+            } else {
+                E subTreeMinimum = minValue(currentNode.getRightChild());
+                currentNode.setData(subTreeMinimum);
+                currentNode.setRightChild(deleteRecursively(currentNode.getRightChild(), subTreeMinimum));
             }
         }
 
         return currentNode;
+    }
+
+    /**
+     * Helper method
+     * @param currentNode
+     * @return E
+     */
+    private E minValue(Node<E> currentNode) {
+
+        while (currentNode.getLeftChild()!= null) {
+            currentNode = currentNode.getLeftChild();
+        }
+
+        return currentNode.getData();
     }
 
     public void displayLinkStructure() {

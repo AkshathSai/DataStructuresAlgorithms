@@ -32,8 +32,18 @@ public class TestBST {
         bst.insert(5);
         bst.insert(29);
         bst.displayLinkStructure();
+        bst.insert(7);
+        bst.insert(22);
+        bst.insert(34);
+        bst.insert(37);
+        bst.insert(27);
+        bst.displayLinkStructure();
         LOGGER.info("Minimum: " + bst.getMinimum());
         LOGGER.info("Maximum: " + bst.getMaximum());
+        bst.delete(15);
+        bst.displayLinkStructure();
+        bst.delete(25);
+        bst.displayLinkStructure();
     }
 
 }
