@@ -1,4 +1,4 @@
-package org.example.list.doublylinkedlist;
+package org.example.lists.doublylinkedlist;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

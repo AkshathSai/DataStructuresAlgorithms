@@ -1,4 +1,4 @@
-package org.example.list.singlylinkedlist;
+package org.example.lists.singlylinkedlist;
 
 public class Node<E> {
 
