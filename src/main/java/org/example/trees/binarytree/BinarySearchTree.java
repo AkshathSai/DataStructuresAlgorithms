@@ -8,18 +8,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 
     private Node<E> rootNode;
 
-    private int height = -1;
-
-
     public boolean isEmpty() {
-        return (height == -1);
-    }
-
-    /**
-     * @return Height/Depth of the Binary Tree
-     */
-    public int getHeight() {
-        return height;
+        return (this.rootNode == null);
     }
 
     public void insert(E value) {
@@ -67,12 +57,11 @@ public class BinarySearchTree<E extends Comparable<E>> {
         } else if (compare < 0) { //Left
             LOGGER.debug(value + " < " + currentNode.getData() + " Looking in the left subtree");
             return lookupRecursively(currentNode.getLeftChild(), value);
-        } else if (compare > 0) { //Right
-            LOGGER.debug(value + " > " + currentNode.getData() + " Looking in the right subtree");
-            return lookupRecursively(currentNode.getRightChild(), value);
         }
 
-        return null;
+        //Right
+        LOGGER.debug(value + " > " + currentNode.getData() + " Looking in the right subtree");
+        return lookupRecursively(currentNode.getRightChild(), value);
     }
 
     public void delete(E value) {

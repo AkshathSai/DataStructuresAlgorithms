@@ -8,6 +8,7 @@ public class TestBST {
     public static void main(String[] args) {
 
         BinarySearchTree<Integer> bst = new BinarySearchTree<>();
+        LOGGER.info("Is Empty? " + bst.isEmpty());
         bst.insert(25);
         bst.insert(15);
         bst.insert(30);
@@ -44,6 +45,7 @@ public class TestBST {
         bst.displayLinkStructure();
         bst.delete(25);
         bst.displayLinkStructure();
+        LOGGER.info("Is Empty? " + bst.isEmpty());
     }
 
 }
