@@ -23,6 +23,46 @@ public class Graph<E> {
         return false;
     }
 
+    public boolean addEdge(E vertex1, E vertex2) {
+
+        if (adjList.get(vertex1) != null && adjList.get(vertex2) !=null){
+            adjList.get(vertex1).add(vertex2);
+            adjList.get(vertex2).add(vertex1);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean removeVertex(E vertex) {
+
+        if (adjList.isEmpty()) {
+            return false;
+        } else if (adjList.get(vertex) != null){
+
+            for (E otherVertex: adjList.get(vertex)) {
+                adjList.get(otherVertex).remove(vertex);
+            }
+
+            adjList.remove(vertex);
+            return true;
+        }
+
+        return false;
+    }
+
+    public boolean removeEdge(E vertex1, E vertex2) {
+
+        if (adjList.isEmpty()) {
+            return false;
+        } else if (adjList.get(vertex1) != null && adjList.get(vertex2) != null) {
+            adjList.get(vertex1).remove(vertex2);
+            adjList.get(vertex2).remove(vertex1);
+            return true;
+        }
+
+        return false;
+    }
+
     public void printGraph() {
         LOGGER.info("Current Graph Structure \n" + adjList);
     }
