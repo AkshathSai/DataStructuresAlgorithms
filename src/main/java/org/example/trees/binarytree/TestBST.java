@@ -46,6 +46,17 @@ public class TestBST {
         bst.delete(25);
         bst.displayLinkStructure();
         LOGGER.info("Is Empty? " + bst.isEmpty());
+
+        BinarySearchTree<Integer> bst2 = new BinarySearchTree<>();
+        bst2.insert(47);
+        bst2.insert(21);
+        bst2.insert(76);
+        bst2.insert(18);
+        bst2.insert(27);
+        bst2.insert(52);
+        bst2.insert(82);
+        LOGGER.info("BFS: " + bst2.breadthFirstSearch());
+
     }
 
 }

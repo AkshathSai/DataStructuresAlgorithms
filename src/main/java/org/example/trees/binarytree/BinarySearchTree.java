@@ -1,6 +1,11 @@
 package org.example.trees.binarytree;
 
+import ch.qos.logback.core.encoder.JsonEscapeUtil;
 import lombok.extern.slf4j.Slf4j;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 
 @Slf4j
@@ -146,6 +151,29 @@ public class BinarySearchTree<E extends Comparable<E>> {
         }
 
         return currentNode.getData();
+    }
+
+    public ArrayList<E> breadthFirstSearch() {
+
+        Node<E> currentNode = rootNode;
+
+        Queue<Node> queue = new LinkedList<>();
+        ArrayList<E> nodeList = new ArrayList<>();
+        queue.add(currentNode);
+
+        while (queue.size() > 0) {
+            currentNode = queue.remove();
+            nodeList.add(currentNode.getData());
+            if (currentNode.getLeftChild() != null) {
+                queue.add(currentNode.getLeftChild());
+            }
+            if (currentNode.getRightChild() != null) {
+                queue.add(currentNode.getRightChild());
+            }
+
+        }
+
+        return nodeList;
     }
 
 }
