@@ -1,6 +1,5 @@
 package org.example.trees.binarytree;
 
-import ch.qos.logback.core.encoder.JsonEscapeUtil;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
@@ -105,8 +104,6 @@ public class BinarySearchTree<E extends Comparable<E>> {
 
     /**
      * Helper method
-     * @param currentNode
-     * @return E
      */
     private E minValue(Node<E> currentNode) {
 
@@ -174,6 +171,102 @@ public class BinarySearchTree<E extends Comparable<E>> {
         }
 
         return nodeList;
+    }
+
+    public ArrayList<E> depthFirstSearchPreOrderTraversal() {
+        ArrayList<E> nodes = new ArrayList<>();
+
+        depthFirstSearchPreOrderTraversalHelper(this.rootNode, nodes);
+        /*class Traverse {
+            Traverse(Node<E> currentNode) {
+                nodes.add(currentNode.getData());
+                if (currentNode.getLeftChild() != null) {
+                    new Traverse(currentNode.getLeftChild());
+                }
+                if (currentNode.getRightChild() != null) {
+                   new Traverse(currentNode.getRightChild());
+                }
+            }
+        }
+        new Traverse(this.rootNode);*/
+
+        return nodes;
+    }
+
+    private void depthFirstSearchPreOrderTraversalHelper(Node<E> currentNode, ArrayList<E> nodes) {
+
+        if (currentNode == null) {
+            return;
+        }
+
+        nodes.add(currentNode.getData());
+        depthFirstSearchPreOrderTraversalHelper(currentNode.getLeftChild(), nodes);
+        depthFirstSearchPreOrderTraversalHelper(currentNode.getRightChild(), nodes);
+    }
+
+    /**
+     * DFS - InOrder Traversal
+     * will sort the elements in numerical order
+     */
+    public ArrayList<E> depthFirstSearchInOrderTraversal() {
+        ArrayList<E> nodes = new ArrayList<>();
+
+        depthFirstSearchInOrderTraversalHelper(this.rootNode, nodes);
+        /*class Traverse {
+            Traverse(Node<E> currentNode) {
+                if (currentNode.getLeftChild() != null) {
+                    new Traverse(currentNode.getLeftChild());
+                }
+                nodes.add(currentNode.getData());
+                if (currentNode.getRightChild() != null) {
+                    new Traverse(currentNode.getRightChild());
+                }
+            }
+        }
+        new Traverse(rootNode);*/
+
+        return nodes;
+    }
+
+    private void depthFirstSearchInOrderTraversalHelper(Node<E> currentNode, ArrayList<E> nodes) {
+
+        if (currentNode == null) {
+            return;
+        }
+
+        depthFirstSearchInOrderTraversalHelper(currentNode.getLeftChild(), nodes);
+        nodes.add(currentNode.getData());
+        depthFirstSearchInOrderTraversalHelper(currentNode.getRightChild(), nodes);
+    }
+
+    public ArrayList<E> depthFirstSearchPostOrderTraversal() {
+        ArrayList<E> nodes = new ArrayList<>();
+        nodes.get(0);
+
+        depthFirstSearchPostOrderTraversalHelper(this.rootNode, nodes);
+        /*class Traverse {
+            Traverse(Node<E> currentNode) {
+                if (currentNode.getLeftChild() != null) {
+                    new Traverse(currentNode.getLeftChild());
+                }
+                if (currentNode.getRightChild() != null) {
+                    new Traverse(currentNode.getRightChild());
+                }
+                nodes.add(currentNode.getData());
+            }
+        }
+        new Traverse(rootNode);*/
+        return nodes;
+    }
+
+    private void depthFirstSearchPostOrderTraversalHelper(Node<E> currentNode, ArrayList<E> nodes) {
+
+        if (currentNode == null) {
+            return;
+        }
+        depthFirstSearchPostOrderTraversalHelper(currentNode.getLeftChild(), nodes);
+        depthFirstSearchPostOrderTraversalHelper(currentNode.getRightChild(), nodes);
+        nodes.add(currentNode.getData());
     }
 
 }

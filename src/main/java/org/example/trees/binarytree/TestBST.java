@@ -56,6 +56,9 @@ public class TestBST {
         bst2.insert(52);
         bst2.insert(82);
         LOGGER.info("BFS: " + bst2.breadthFirstSearch());
+        LOGGER.info("DFS PreOrder: " + bst2.depthFirstSearchPreOrderTraversal());
+        LOGGER.info("DFS InOrder: " + bst2.depthFirstSearchInOrderTraversal());
+        LOGGER.info("DFS PostOrder: " + bst2.depthFirstSearchPostOrderTraversal());
 
     }
 
