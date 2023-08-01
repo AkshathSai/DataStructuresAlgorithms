@@ -45,5 +45,43 @@ public class Sort<T extends Comparable<T>> {
     }
 
 
+    /**
+     * Select a minimum/max element in an array & compare with the rest
+     * @param array
+     * @param <T>
+     */
+    public static <T extends Comparable<T>> void selectionSort(T[] array) {
+
+        //Iteration
+        for (int i=0; i < array.length; i++) {
+
+            int minElementIndex = i;
+
+            //Comparison
+            for (int j = i+1;  j < array.length; j++) {
+
+                //Minimum Element check
+                if (array[j].compareTo(array[minElementIndex]) < 0) {
+                    minElementIndex = j;
+                }
+            }
+
+            /**
+             * If the current selected element is the minimum element
+             * in the given array then we shouldn't swap
+             */
+            if (i != minElementIndex) {
+                //Swap
+                T temp = array[i];
+                array[i] = array[minElementIndex];
+                array[minElementIndex] = temp;
+            }
+
+        }
+
+    }
+
+
+
 
 }
