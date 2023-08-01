@@ -33,13 +33,16 @@ public class Sort<T extends Comparable<T>> {
             }
             LOGGER.info("Swaps " + swaps);
 
-            /** Not required since we're decrementing the
-             *  iteration count in the main for-loop
+            /**
+             * Best case scenario - O(Ω)
+             * If the elements are already sorted,
+             * it'll just run a single iteration comparison on
+             * all the elements & breaks the loop
              */
-           /*if (swaps == 0) {
+           if (swaps == 0) {
                 LOGGER.debug("Break loop");
                 break;
-            }*/
+           }
         }
 
     }
@@ -53,7 +56,7 @@ public class Sort<T extends Comparable<T>> {
     public static <T extends Comparable<T>> void selectionSort(T[] array) {
 
         //Iteration
-        for (int i=0; i < array.length; i++) {
+        for (int i=0; i < array.length - 1; i++) {
 
             int minElementIndex = i;
 
@@ -61,6 +64,7 @@ public class Sort<T extends Comparable<T>> {
             for (int j = i+1;  j < array.length; j++) {
 
                 //Minimum Element check
+                //if (array[minElementIndex].compareTo(array[j]) < 0) { - For Descending order sort
                 if (array[j].compareTo(array[minElementIndex]) < 0) {
                     minElementIndex = j;
                 }
@@ -70,7 +74,7 @@ public class Sort<T extends Comparable<T>> {
              * If the current selected element is the minimum element
              * in the given array then we shouldn't swap
              */
-            if (i != minElementIndex) {
+            if (minElementIndex != i) {
                 //Swap
                 T temp = array[i];
                 array[i] = array[minElementIndex];

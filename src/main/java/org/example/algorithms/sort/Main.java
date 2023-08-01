@@ -18,6 +18,9 @@ public class Main {
         Sort.bubbleSort(array);
         LOGGER.info("[Bubble Sort] After sort " + Arrays.toString(array));
 
+        //Best Case scenario test (use debugger!)
+        Sort.bubbleSort(array);
+
         Integer[] array2 = Arrays.copyOf(original, 6);
         LOGGER.info("[Selection Sort] Before Sort " + Arrays.toString(array2));
 
