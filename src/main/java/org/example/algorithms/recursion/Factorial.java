@@ -1,4 +1,4 @@
-package org.example.algorithms.factorial;
+package org.example.algorithms.recursion;
 
 import lombok.extern.slf4j.Slf4j;
 

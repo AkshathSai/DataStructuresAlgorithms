@@ -1,4 +1,4 @@
-package org.example.algorithms.sort;
+package org.example.algorithms.sorting;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -58,6 +58,7 @@ public class Sort<T extends Comparable<T>> {
         //Iteration
         for (int i=0; i < array.length - 1; i++) {
 
+            //Assume initial element index as minimum
             int minElementIndex = i;
 
             //Comparison
@@ -86,6 +87,25 @@ public class Sort<T extends Comparable<T>> {
     }
 
 
+    public static <T extends Comparable<T>> void insertionSort(T[] array) {
 
+        //Start with the 2nd element in the array
+        for(int i=1; i < array.length; i++) {
+            //Store the 2nd element
+            T current = array[i];
+            //previous element index
+            int j = i - 1;
+
+            /**
+             * Compare the 2nd(or)next element with the previous elements
+             * and swap them
+             */
+            while ( j > -1 && current.compareTo(array[j]) < 0) {
+                array[j+1] = array[j];
+                array[j] = current;
+                j--; //move j index to the   previous element
+            }
+        }
+    }
 
 }

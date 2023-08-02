@@ -1,4 +1,4 @@
-package org.example.algorithms.sort;
+package org.example.algorithms.sorting;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -27,7 +27,11 @@ public class Main {
         Sort.selectionSort(array2);
         LOGGER.info("[Selection Sort] After Sort " + Arrays.toString(array2));
 
+        Integer[] array3 = Arrays.copyOf(original, 6);
+        LOGGER.info("[Insertion Sort] Before Sort " + Arrays.toString(array3));
 
+        Sort.insertionSort(array3);
+        LOGGER.info("[Insertion Sort] After Sort " + Arrays.toString(array3));
     }
 
 }
