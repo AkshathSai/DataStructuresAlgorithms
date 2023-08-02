@@ -1,4 +1,4 @@
-# 💼 A portfolio of meticulously crafted Data structures and Algorithms using Java - ☀️ ☁️ 👷‍♂️ 🚧🚧🚧🚧🚧🚧
+# 💼 A portfolio of meticulously crafted Data structures & Algorithms using Java - ☀️ ☁️ 👷‍♂️ 🚧🚧🚧🚧🚧🚧
 
 
 
