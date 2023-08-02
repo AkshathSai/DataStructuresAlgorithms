@@ -1,4 +1,4 @@
-package org.example.graphs.using_adjacencylist;
+package org.example.datastructures.graphs.using_adjacencylist;
 
 import lombok.extern.slf4j.Slf4j;
 

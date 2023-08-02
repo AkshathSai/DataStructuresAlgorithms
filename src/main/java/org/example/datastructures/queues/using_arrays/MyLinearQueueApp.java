@@ -1,4 +1,4 @@
-package org.example.queues.using_arrays;
+package org.example.datastructures.queues.using_arrays;
 
 import lombok.extern.slf4j.Slf4j;
 

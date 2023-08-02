@@ -1,4 +1,4 @@
-package org.example.lists.doublylinkedlist;
+package org.example.datastructures.lists.doublylinkedlist;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

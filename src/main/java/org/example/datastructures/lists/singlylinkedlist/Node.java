@@ -1,4 +1,4 @@
-package org.example.lists.singlylinkedlist;
+package org.example.datastructures.lists.singlylinkedlist;
 
 public class Node<E> {
 

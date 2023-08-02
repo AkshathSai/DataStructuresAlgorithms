@@ -1,4 +1,4 @@
-package org.example.stacks.using_lists;
+package org.example.datastructures.stacks.using_lists;
 
 import java.util.LinkedList;
 

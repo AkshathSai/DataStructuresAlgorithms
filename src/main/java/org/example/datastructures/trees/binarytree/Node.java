@@ -1,4 +1,4 @@
-package org.example.trees.binarytree;
+package org.example.datastructures.trees.binarytree;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
