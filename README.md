@@ -1,4 +1,6 @@
-# 💼 A portfolio of meticulously crafted Data structures and Algorithms using Java
+# 💼 A portfolio of meticulously crafted Data structures and Algorithms using Java - ☀️ ☁️ 👷‍♂️ 🚧🚧🚧🚧🚧🚧
+
+
 
 🎯 Demonstrating Java Mastery: Essential Data Structures & Algorithms Implementation
 
@@ -16,5 +18,10 @@
 - Clean and Reusable Code: The codebase is well-structured and designed to be easily reusable and extensible.
 
 Excited to collaborate and grow together. Let's connect! 🤝 #Java #DataStructures #Algorithms #SoftwareEngineering #OpenToOpportunities
+
+
+## Authors
+
+- [@Akshath Sai](https://github.com/AkshathSai)
 
 ## Installation - WIP!
