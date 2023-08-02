@@ -12,8 +12,8 @@
 
 ### Features
 - Generic Data Structures: Implementation of linked lists, stacks, queues, and trees that can handle various data types.
-- Sorting Algorithms: Optimized algorithms for efficient sorting of data sets, including QuickSort, MergeSort, and BubbleSort.
-- Searching Algorithms: Efficient searching algorithms like Binary Search and Depth-First Search (DFS) for quick data retrieval.
+- Sorting Algorithms: Optimized algorithms for efficient sorting of data sets, including BubbleSort, SelectionSort, InsertionSort, QuickSort & MergeSort.
+- Searching Algorithms: Efficient searching algorithms like Binary Search, Breadth-First Search (BFS) & Depth-First Search (DFS) for quick data retrieval.
 - Shortest-Path Solvers: Algorithms to find the shortest paths in graphs, including Dijkstra's, Floyd Warshall & Bellman Ford algorithms.
 - Clean and Reusable Code: The codebase is well-structured and designed to be easily reusable and extensible.
 
@@ -25,3 +25,12 @@ Excited to collaborate and grow together. Let's connect! 🤝 #Java #DataStructu
 - [@Akshath Sai](https://github.com/AkshathSai)
 
 ## Installation - WIP!
+
+## Links
+
+<p align="left">
+<!-- <a href="https://www.github.com/AkshathSai" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="32" height="32" /></a>-->
+<a href="https://www.github.com/AkshathSai" target="_blank" rel="noreferrer"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" /></a>
+<!-- <a href="https://www.linkedin.com/in/akshath-sai/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="32" height="32" /></a> -->
+<a href="https://www.linkedin.com/in/akshath-sai/" target="_blank" rel="noreferrer"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+</p>
