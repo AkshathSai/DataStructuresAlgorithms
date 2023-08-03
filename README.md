@@ -15,7 +15,7 @@
 - Sorting Algorithms: Optimized algorithms for efficient sorting of data sets, including BubbleSort, SelectionSort, InsertionSort, QuickSort & MergeSort.
 - Searching Algorithms: Efficient searching algorithms like Binary Search, Breadth-First Search (BFS) & Depth-First Search (DFS) for quick data retrieval.
 - Shortest-Path Solvers: Algorithms to find the shortest paths in graphs, including Dijkstra's, Floyd Warshall & Bellman Ford algorithms.
-- Clean and Reusable Code: The codebase is well-structured and designed to be easily reusable and extensible.
+- Clean and Reusable Code
 
 Excited to collaborate and grow together. Let's connect! 🤝 #Java #DataStructures #Algorithms #SoftwareEngineering #OpenToOpportunities
 
