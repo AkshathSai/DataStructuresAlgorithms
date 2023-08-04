@@ -2,14 +2,14 @@ package org.example.datastructures.stacks.using_arrays;
 
 import java.util.*;
 
-public class MyStack {
+public class Stack {
 
     //Stack storage
     private Object[] array;
 
     int top = - 1;
 
-    public MyStack(int size) {
+    public Stack(int size) {
         array = new Object[size];
     }
 

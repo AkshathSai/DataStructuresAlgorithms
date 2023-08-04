@@ -2,13 +2,13 @@ package org.example.datastructures.stacks.using_arrays;
 
 import java.util.Scanner;
 
-public class StackMainApplication {
+public class MyStackUsingArrays {
 
     public static void main(String[] args) {
 
         System.out.println("Welcome to My Stack! Using Arrays as Storage");
         printMenu();
-        MyStack stack = null;
+        Stack stack = null;
         Scanner sc = new Scanner(System.in);
 
         int i = 1;
@@ -21,7 +21,7 @@ public class StackMainApplication {
                 case 1:
                     System.out.println("Enter the size of the stack to be created");
                     int size = sc.nextInt();
-                    stack = new MyStack(size);
+                    stack = new Stack(size);
                     System.out.println("Stack of size " + size + " created successfully");
                     printMenu();
                     break;

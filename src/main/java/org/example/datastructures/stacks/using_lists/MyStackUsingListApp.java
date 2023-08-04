@@ -7,7 +7,7 @@ public class MyStackUsingListApp {
 
     public static void main(String[] args) {
 
-        MyStack<Integer> myStack = new MyStack<>();
+        Stack<Integer> myStack = new Stack<>();
         myStack.push(10);
         myStack.push(20);
         myStack.push(30);

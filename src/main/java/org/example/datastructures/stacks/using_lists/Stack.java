@@ -4,7 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.example.datastructures.lists.singlylinkedlist.MySinglyLinkedList;
 
 @Slf4j
-public class MyStack<E> {
+public class Stack<E> {
 
     private MySinglyLinkedList<E> linkedArrayList = new MySinglyLinkedList<>();
 
