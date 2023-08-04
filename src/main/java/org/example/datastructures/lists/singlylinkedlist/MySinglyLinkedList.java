@@ -1,9 +1,13 @@
 package org.example.datastructures.lists.singlylinkedlist;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class MySinglyLinkedList<E> {
 
     private Node<E> headNode;
-    private int size = 0;
+    private int count = 0;
+
 
     public boolean insertFront(E data) {
 
@@ -30,7 +34,7 @@ public class MySinglyLinkedList<E> {
         newNode.setNext(headNode);
         headNode = newNode;
 
-        size++;
+        count++;
 
         System.out.println("Current LinkedList: \n" + headNode);
 
@@ -64,7 +68,7 @@ public class MySinglyLinkedList<E> {
         if (headNode == null) {
             newNode.setNext(null);
             headNode = newNode;
-            size++;
+            count++;
             return true;
         }
 
@@ -86,7 +90,7 @@ public class MySinglyLinkedList<E> {
         newNode.setNext(tempNode.getNext());
         tempNode.setNext(newNode);
 
-        size++;
+        count++;
 
         System.out.println("Current LinkedList \n" + headNode);
 
@@ -113,7 +117,7 @@ public class MySinglyLinkedList<E> {
 
         currentNode.setNext(newNode);
 
-        size++;
+        count++;
 
         return true;
     }
@@ -139,7 +143,7 @@ public class MySinglyLinkedList<E> {
 
           previousNode.setNext(currentNode.getNext());
 
-          size--;
+          count--;
         }
 
         return null;
@@ -174,7 +178,7 @@ public class MySinglyLinkedList<E> {
             headNode = tempNode.getNext();
         }
 
-        size--;
+        count--;
 
         System.out.println("Current LinkedList: \n" + headNode);
 
@@ -224,7 +228,7 @@ public class MySinglyLinkedList<E> {
          */
         tempNode = null;
 
-        size--;
+        count--;
 
         System.out.println("Current LinkedList: \n" + headNode);
 
@@ -265,8 +269,35 @@ public class MySinglyLinkedList<E> {
         return -1;
     }
 
+    public E elementAt(int index) {
+
+        if (index < 0) {
+            LOGGER.error("Index can't be negative!!");
+            return null;
+        }
+
+        Node<E> currentNode = headNode;
+        int count = 0;
+
+        while (currentNode != null) {
+
+            if (count == index) {
+                return currentNode.getData();
+            }
+
+            count++;
+            currentNode = currentNode.getNext();
+        }
+
+        return null;
+    }
+
     public MySinglyLinkedList() {
         //(default) no argument constructor
+    }
+
+    public int getCount() {
+        return count;
     }
 
 }
