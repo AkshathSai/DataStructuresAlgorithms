@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class MySinglyLinkedList<E> {
 
-    private Node<E> headNode;
+    public Node<E> headNode;
     private int count = 0;
 
 

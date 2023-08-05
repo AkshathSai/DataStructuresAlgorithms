@@ -2,6 +2,7 @@ package org.example.datastructures.stacks.using_lists;
 
 import lombok.extern.slf4j.Slf4j;
 import org.example.datastructures.lists.singlylinkedlist.MySinglyLinkedList;
+import org.example.datastructures.lists.singlylinkedlist.Node;
 
 @Slf4j
 public class Stack<E> {
@@ -16,16 +17,8 @@ public class Stack<E> {
         return linkedArrayList.deleteFront();
     }
 
-    public E peek(E value) {
-
-        int index = linkedArrayList.search(value);
-
-        if (index != -1) {
-            return linkedArrayList.elementAt(index);
-        }
-
-        LOGGER.error("Element does not exist!!");
-        return null;
+    public E peek() {
+        return linkedArrayList.headNode.getData();
     }
 
     public void getElementCount() {
