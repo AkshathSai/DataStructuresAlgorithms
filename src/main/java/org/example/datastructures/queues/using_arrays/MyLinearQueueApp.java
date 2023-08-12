@@ -15,17 +15,17 @@ public class MyLinearQueueApp {
          * major drawback in array implementation of queue.
          *
          * Solutions:
-         * 1. Use List datastructure as Storage
+         * 1. Use List dataStructure as Storage
          * 2. Design the queue in a circular fashion
          *
          */
-        MyLinearQueue<String> stringMyLinearQueue = new MyLinearQueue<>(2);
-        LOGGER.info("Linear String Queue EnQ ABC : " + stringMyLinearQueue.EnQ("ABC"));
-        LOGGER.info("Linear String Queue EnQ DEF: " + stringMyLinearQueue.EnQ("DEF"));
-        LOGGER.info("Linear String Queue: " + stringMyLinearQueue);
-        LOGGER.info("Linear String Queue DeQ: " + stringMyLinearQueue.DeQ());
-        LOGGER.info("Linear String Queue Post DeQ: " + stringMyLinearQueue);
-        LOGGER.info("Linear String Queue EnQ XYZ: " + stringMyLinearQueue.EnQ("XYZ"));
-        LOGGER.info("Linear String Queue: " + stringMyLinearQueue);
+        Queue<String> stringQueue = new Queue<>(2);
+        LOGGER.info("Linear String Queue EnQ ABC : " + stringQueue.EnQ("ABC"));
+        LOGGER.info("Linear String Queue EnQ DEF: " + stringQueue.EnQ("DEF"));
+        LOGGER.info("Linear String Queue: " + stringQueue);
+        LOGGER.info("Linear String Queue DeQ: " + stringQueue.DeQ());
+        LOGGER.info("Linear String Queue Post DeQ: " + stringQueue);
+        LOGGER.info("Linear String Queue EnQ XYZ: " + stringQueue.EnQ("XYZ"));
+        LOGGER.info("Linear String Queue: " + stringQueue);
     }
 }

@@ -5,14 +5,14 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.Arrays;
 
 @Slf4j
-public class MyLinearQueue<E> {
+public class Queue<E> {
 
     private int size;
     private E[] qData;
     private int front = -1;
     private int rear = -1;
 
-    public MyLinearQueue(int size) {
+    public Queue(int size) {
         qData = (E[]) new Object[size];
         this.size = size;
     }
