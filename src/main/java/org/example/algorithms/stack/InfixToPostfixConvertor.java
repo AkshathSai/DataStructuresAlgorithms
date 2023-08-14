@@ -1,9 +1,7 @@
 package org.example.algorithms.stack;
 
-import lombok.extern.slf4j.Slf4j;
 import org.example.datastructures.stacks.using_lists.Stack;
 
-@Slf4j
 public class InfixToPostfixConvertor {
 
     public static void main(String[] args) {
