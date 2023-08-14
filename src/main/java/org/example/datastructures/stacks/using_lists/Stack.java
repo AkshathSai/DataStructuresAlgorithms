@@ -6,7 +6,7 @@ import org.example.datastructures.lists.singlylinkedlist.MySinglyLinkedList;
 @Slf4j
 public class Stack<E> {
 
-    private MySinglyLinkedList<E> linkedArrayList = new MySinglyLinkedList<>();
+    private MySinglyLinkedList<E> linkedArrayList;
 
     public void push(E value) {
         linkedArrayList.insertFront(value);
@@ -36,6 +36,10 @@ public class Stack<E> {
         }
 
         return true;
+    }
+
+    public Stack() {
+       this.linkedArrayList = new MySinglyLinkedList<>();
     }
 
 }

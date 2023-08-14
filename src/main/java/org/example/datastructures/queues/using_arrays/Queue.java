@@ -13,7 +13,7 @@ public class Queue<E> {
     private int rear = -1;
 
     public Queue(int size) {
-        qData = (E[]) new Object[size];
+        this.qData = (E[]) new Object[size];
         this.size = size;
     }
 
