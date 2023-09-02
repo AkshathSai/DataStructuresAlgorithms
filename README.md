@@ -1,5 +1,7 @@
 # 💼 A portfolio of meticulously crafted Data structures & Algorithms using Java - ☀️ ☁️ 👷‍♂️ 🚧🚧🚧🚧🚧🚧
 
+[![Maven](https://badgen.net/badge/icon/maven?icon=maven&label)](https://https://maven.apache.org/)
+![GitHub](https://img.shields.io/github/license/akshathsai/TuneTrip)
 
 
 🎯 Demonstrating Java Mastery: Essential Data Structures & Algorithms Implementation
