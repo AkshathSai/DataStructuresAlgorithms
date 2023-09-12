@@ -32,6 +32,16 @@ public class Main {
 
         Sort.insertionSort(array3);
         LOGGER.info("[Insertion Sort] After Sort " + Arrays.toString(array3));
+
+        int [] test = new int[]{4, 2, 6, 5, 1, 3};
+        Sort.bubbleSort(test);
+        System.out.println("Bubble Sort v2 [After sort]: ");
+        Arrays.stream(test).forEach(System.out::print);
+
+        int [] test2 = new int[]{1, 2, 3, 4, 5, 6};
+        Sort.bubbleSort(test2);
+        System.out.println("Bubble Sort v2 [After sort]: ");
+        Arrays.stream(test2).forEach(System.out::print);
     }
 
 }

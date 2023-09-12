@@ -2,8 +2,38 @@ package org.example.algorithms.sorting;
 
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.Arrays;
+
 @Slf4j
 public class Sort<T extends Comparable<T>> {
+
+
+    public static void bubbleSort(int[] array) {
+        System.out.println("Bubble Sort v2 [Before sort]: ");
+        Arrays.stream(array).forEach(System.out::print);
+        System.out.println(" ");
+
+        // Iteration loop
+        for (int i=0; i<array.length-1; i++) {
+
+            short swap=0;
+            for(int j=0; j<array.length-1;j++) { // Comparison loop
+                if (array[j] > array[j+1]) {
+                    // swap
+                    int temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
+                    swap++;
+                }
+            }
+            LOGGER.info("Swaps " + swap);
+
+            if (swap == 0) {
+                LOGGER.info("Breaking the loop");
+                return;
+            }
+        }
+    }
 
     /**
      * Bubble Sort is an in-place sorting algorithm
