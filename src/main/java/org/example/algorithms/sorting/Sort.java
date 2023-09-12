@@ -41,7 +41,7 @@ public class Sort<T extends Comparable<T>> {
              */
            if (swaps == 0) {
                 LOGGER.debug("Break loop");
-                break;
+                return;
            }
         }
 
