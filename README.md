@@ -21,6 +21,46 @@
 
 Excited to collaborate and grow together. Let's connect! 🤝 #Java #DataStructures #Algorithms #SoftwareEngineering #OpenToOpportunities
 
+### Pseudocode
+
+- Linear Search
+
+  ```
+  For i from 0 to n-1
+    if 50 is behind doors[i]
+      Return true
+  Return false
+  ``` 
+
+- Binary Search - To apply Binary Search the input array must be sorted
+
+  ```
+  If no doors left
+    Return false
+  If 50 is behind the middle door
+    Return true
+  Else if 50 < middle door
+    Search left half
+  Else if 50 > middle door
+    Seach right half
+  ```
+  ```
+  If no doors left
+    Return false
+  If 50 is behind doors[middle]
+    Return true
+  Else if 50 < doors[middle]
+    Search doors[0] through doors[middle - 1] 
+  Else if 50 > doors[middle]
+    Search doors[middle + 1] through doors[n - 1]
+  ```
+
+- To find middle element
+  ```
+  int mid = l + (r - l) / 2; 
+  (or)
+  int mid = firstIndex + (lastIndex - firstIndex)/2
+  ```
 
 ## Authors
 
