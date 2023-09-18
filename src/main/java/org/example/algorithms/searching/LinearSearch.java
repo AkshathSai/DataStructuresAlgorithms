@@ -16,6 +16,7 @@ public class LinearSearch {
 
         for (int i=0; i<array.length; i++) {
             if (array[i] == target) {
+                LOGGER.info("Found it! At index {}", i);
                 return array[i];
             }
         }
