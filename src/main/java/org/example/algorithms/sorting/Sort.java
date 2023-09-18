@@ -17,7 +17,7 @@ public class Sort<T extends Comparable<T>> {
         for (int i=0; i<array.length-1; i++) {
 
             short swap=0;
-            for(int j=0; j<array.length-1;j++) { // Comparison loop
+            for(int j=0; j<array.length-i-1;j++) { // Comparison loop
                 if (array[j] > array[j+1]) {
                     // swap
                     int temp = array[j];
