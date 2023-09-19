@@ -20,12 +20,12 @@ public class MyLinearQueueApp {
          *
          */
         Queue<String> stringQueue = new Queue<>(2);
-        LOGGER.info("Linear String Queue EnQ ABC : " + stringQueue.EnQ("ABC"));
-        LOGGER.info("Linear String Queue EnQ DEF: " + stringQueue.EnQ("DEF"));
-        LOGGER.info("Linear String Queue: " + stringQueue);
-        LOGGER.info("Linear String Queue DeQ: " + stringQueue.DeQ());
-        LOGGER.info("Linear String Queue Post DeQ: " + stringQueue);
-        LOGGER.info("Linear String Queue EnQ XYZ: " + stringQueue.EnQ("XYZ"));
-        LOGGER.info("Linear String Queue: " + stringQueue);
+        log.info("Linear String Queue EnQ ABC : " + stringQueue.EnQ("ABC"));
+        log.info("Linear String Queue EnQ DEF: " + stringQueue.EnQ("DEF"));
+        log.info("Linear String Queue: " + stringQueue);
+        log.info("Linear String Queue DeQ: " + stringQueue.DeQ());
+        log.info("Linear String Queue Post DeQ: " + stringQueue);
+        log.info("Linear String Queue EnQ XYZ: " + stringQueue.EnQ("XYZ"));
+        log.info("Linear String Queue: " + stringQueue);
     }
 }

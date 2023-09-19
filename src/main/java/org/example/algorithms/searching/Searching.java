@@ -9,7 +9,7 @@ public class Searching {
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] == target) {
-                LOGGER.info("Found it! At index {}", i);
+                log.info("Found it! At index {}", i);
                 return array[i];
             }
         }

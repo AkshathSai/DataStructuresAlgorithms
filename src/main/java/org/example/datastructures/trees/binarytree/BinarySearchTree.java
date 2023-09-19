@@ -50,7 +50,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
     private Node<E> lookupRecursively(Node<E> currentNode, E value) {
 
         if (currentNode == null) {
-            LOGGER.info("Element not found!");
+            log.info("Element not found!");
             return null;
         }
 
@@ -59,12 +59,12 @@ public class BinarySearchTree<E extends Comparable<E>> {
         if (compare == 0) {
             return currentNode;
         } else if (compare < 0) { //Left
-            LOGGER.debug(value + " < " + currentNode.getData() + " Looking in the left subtree");
+            log.debug(value + " < " + currentNode.getData() + " Looking in the left subtree");
             return lookupRecursively(currentNode.getLeftChild(), value);
         }
 
         //Right
-        LOGGER.debug(value + " > " + currentNode.getData() + " Looking in the right subtree");
+        log.debug(value + " > " + currentNode.getData() + " Looking in the right subtree");
         return lookupRecursively(currentNode.getRightChild(), value);
     }
 
@@ -115,13 +115,13 @@ public class BinarySearchTree<E extends Comparable<E>> {
     }
 
     public void displayLinkStructure() {
-        LOGGER.debug("BST:\n" + rootNode);
+        log.debug("BST:\n" + rootNode);
     }
 
     public E getMinimum() {
 
         if (this.rootNode == null) {
-            LOGGER.info("No Elements found in the Tree");
+            log.info("No Elements found in the Tree");
             return null;
         }
 
@@ -137,7 +137,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
     public E getMaximum() {
 
         if (this.rootNode == null) {
-            LOGGER.info("No Elements found in the Tree");
+            log.info("No Elements found in the Tree");
             return null;
         }
 

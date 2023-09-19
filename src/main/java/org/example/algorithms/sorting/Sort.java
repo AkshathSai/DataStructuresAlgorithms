@@ -26,10 +26,10 @@ public class Sort<T extends Comparable<T>> {
                     swap++;
                 }
             }
-            LOGGER.info("Swaps " + swap);
+            log.info("Swaps " + swap);
 
             if (swap == 0) {
-                LOGGER.info("Breaking the loop");
+                log.info("Breaking the loop");
                 return;
             }
         }
@@ -61,7 +61,7 @@ public class Sort<T extends Comparable<T>> {
                 }
 
             }
-            LOGGER.info("Swaps " + swaps);
+            log.info("Swaps " + swaps);
 
             /**
              * Best case scenario - O(Ω)
@@ -70,7 +70,7 @@ public class Sort<T extends Comparable<T>> {
              * all the elements & breaks the loop
              */
            if (swaps == 0) {
-                LOGGER.debug("Break loop");
+                log.debug("Break loop");
                 return;
            }
         }

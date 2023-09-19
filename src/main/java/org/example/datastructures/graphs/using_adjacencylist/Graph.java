@@ -64,7 +64,7 @@ public class Graph<E> {
     }
 
     public void printGraph() {
-        LOGGER.info("Current Graph Structure \n" + adjList);
+        log.info("Current Graph Structure \n" + adjList);
     }
 
 }

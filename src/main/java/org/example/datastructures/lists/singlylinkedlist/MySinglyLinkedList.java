@@ -272,7 +272,7 @@ public class MySinglyLinkedList<E> {
     public E elementAt(int index) {
 
         if (index < 0) {
-            LOGGER.error("Index can't be negative!!");
+            log.error("Index can't be negative!!");
             return null;
         }
 

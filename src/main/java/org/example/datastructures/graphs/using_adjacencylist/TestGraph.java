@@ -19,7 +19,7 @@ public class TestGraph {
         testGraph.printGraph();
 
         testGraph.addVertex("C");
-        LOGGER.info("Remove D -> " + testGraph.removeVertex("D"));
+        log.info("Remove D -> " + testGraph.removeVertex("D"));
 
         testGraph.addEdge("A", "B");
         testGraph.addEdge("A", "C");

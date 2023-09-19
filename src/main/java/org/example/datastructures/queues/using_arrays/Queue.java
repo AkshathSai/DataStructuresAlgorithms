@@ -38,7 +38,7 @@ public class Queue<E> {
     public boolean EnQ(E data) {
 
         if (isQueueFull()) {
-            LOGGER.error("Queue Overflow!!!");
+            log.error("Queue Overflow!!!");
             return false;
         }
 
@@ -56,7 +56,7 @@ public class Queue<E> {
     public E DeQ() {
 
         if (isQueueEmpty()) {
-            LOGGER.error("Queue Underflow!!!");
+            log.error("Queue Underflow!!!");
             return null;
         }
 

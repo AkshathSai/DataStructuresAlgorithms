@@ -11,15 +11,15 @@ public class MyStackUsingListApp {
         myStack.push(10);
         myStack.push(20);
         myStack.push(30);
-        LOGGER.info("Peek " + myStack.peek());
-        LOGGER.info("Is Stack Empty? " + myStack.isStackEmpty());
+        log.info("Peek " + myStack.peek());
+        log.info("Is Stack Empty? " + myStack.isStackEmpty());
         myStack.getElementCount();
         myStack.pop();
         myStack.getElementCount();
-        LOGGER.info("Peek " + myStack.peek());
+        log.info("Peek " + myStack.peek());
         myStack.makeStackEmpty();
         myStack.getElementCount();
-        LOGGER.info("Is Stack Empty? " + myStack.isStackEmpty());
+        log.info("Is Stack Empty? " + myStack.isStackEmpty());
     }
 
 }

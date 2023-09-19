@@ -21,7 +21,7 @@ public class Stack<E> {
     }
 
     public void getElementCount() {
-        LOGGER.debug("Number of nodes " + linkedArrayList.getCount());
+        log.debug("Number of nodes " + linkedArrayList.getCount());
     }
 
     public void makeStackEmpty() {

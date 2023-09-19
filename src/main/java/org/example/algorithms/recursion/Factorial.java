@@ -7,7 +7,7 @@ public class Factorial {
 
     public static void main(String[] args) {
 
-        LOGGER.info("Factorial value " + factorial(5));
+        log.info("Factorial value " + factorial(5));
 
     }
 
