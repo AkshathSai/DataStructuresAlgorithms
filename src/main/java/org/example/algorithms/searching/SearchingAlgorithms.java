@@ -3,7 +3,7 @@ package org.example.algorithms.searching;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class Searching {
+public class SearchingAlgorithms {
 
     public static int linearSearch(int[] array, int target) {
 
