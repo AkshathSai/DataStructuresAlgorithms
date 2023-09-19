@@ -7,7 +7,7 @@ public class Searching {
 
     public static int linearSearch(int[] array, int target) {
 
-        for (int i=0; i<array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             if (array[i] == target) {
                 LOGGER.info("Found it! At index {}", i);
                 return array[i];
@@ -18,14 +18,14 @@ public class Searching {
 
     public static int recursiveBinarySearch(int[] array, int startIndex, int endIndex, int target) {
 
-        int midIndex = startIndex + (endIndex - startIndex)/2;
+        int midIndex = startIndex + (endIndex - startIndex) / 2;
 
         if (endIndex >= startIndex) {
             if (array[midIndex] == target) {
                 return array[midIndex];
             } else if (array[midIndex] > target) {
                 //Search left sub array
-                return recursiveBinarySearch(array, 0, midIndex - 1,target);
+                return recursiveBinarySearch(array, 0, midIndex - 1, target);
             } else if (array[midIndex] < target) {
                 //Search right sub array
                 return recursiveBinarySearch(array, midIndex + 1, endIndex, target);
@@ -40,9 +40,9 @@ public class Searching {
         int start = 0;
         int end = array.length - 1;
 
-        while (start<=end) {
+        while (start <= end) {
 
-            int midIndex = start + (end - start)/2;
+            int midIndex = start + (end - start) / 2;
 
             if (array[midIndex] == target) {
                 return array[midIndex];
