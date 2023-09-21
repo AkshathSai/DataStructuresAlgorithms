@@ -77,5 +77,10 @@ Excited to collaborate and grow together. Let's connect! 🤝 #Java #DataStructu
 <a href="https://www.linkedin.com/in/akshath-sai/" target="_blank" rel="noreferrer"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
 </p>
 
-### PRO TIPS
+### Summary & PRO TIPS
+#### Sorting
 - Bubble Sort's adjacent element comparison technique can bubble up the highest element in an array in its first iteration. This can also vice versa to the smallest element in an array.
+#### Lists
+- A LinkedList built using Stack (i.e., putting new items into the list would prepend (before the current entry), will result in a Time Complexity of Big O(1) for insertions.
+- LinkedList implemented with Queue (i.e., adding new elements to the list would append (next to the current element), will result in a Time Complexity of Big O(N) for insertions. (Because it must scan all existing nodes to find the empty pointer and add there.)
+  - However, this could be solved by establishing another pointer that maintains track of the next empty field of a Node so that we can jump right there and append it (Trade-off a bit more memory) 
