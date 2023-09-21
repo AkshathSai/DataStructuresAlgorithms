@@ -9,7 +9,7 @@ public class MySinglyLinkedList<E> {
     private int count = 0;
 
 
-    // Time Complexity O(1)
+    // Prepend - Time Complexity O(1)
     public boolean insertFront(E data) {
 
         // Create new node
@@ -33,7 +33,7 @@ public class MySinglyLinkedList<E> {
         return true;
     }
 
-    // Time Complexity O(n)
+    // Append - Time Complexity O(n)
     public boolean insertEnd(E data) {
 
         // Create new node
