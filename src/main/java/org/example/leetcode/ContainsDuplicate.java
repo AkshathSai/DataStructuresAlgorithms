@@ -24,7 +24,7 @@ public class ContainsDuplicate {
     }
 
     private static boolean containsDuplicateWithSet(List<Integer> listOfNumbers) {
-        Set<?> setOfNumbers = new HashSet<>(listOfNumbers);
+        Set<Integer> setOfNumbers = new HashSet<>(listOfNumbers);
         return listOfNumbers.size() != setOfNumbers.size();
     }
 
