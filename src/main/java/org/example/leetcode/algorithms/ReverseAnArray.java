@@ -1,8 +1,11 @@
 package org.example.leetcode.algorithms;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Slf4j
 public class ReverseAnArray {
 
     public static void main(String[] args) {
@@ -19,13 +22,13 @@ public class ReverseAnArray {
             tempList.add(arr.get(i));
         }
 
-        System.out.println(tempList);
+        log.info("Sorted sub array {}", tempList);
         int j=0;
 
         for(int i=startIndex; i<arr.size(); i++){
             arr.set(i, tempList.get(j++));
         }
 
-        System.out.println(arr);
+        log.info("Final sorted array {}", arr);
     }
 }
