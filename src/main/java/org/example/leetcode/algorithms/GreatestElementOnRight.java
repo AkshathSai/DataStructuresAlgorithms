@@ -2,6 +2,9 @@ package org.example.leetcode.algorithms;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * @see https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/description/
+ */
 @Slf4j
 public class GreatestElementOnRight {
 

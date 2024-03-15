@@ -4,6 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.*;
 
+/**
+ * @see https://leetcode.com/problems/contains-duplicate/description/
+ */
 @Slf4j
 public class ContainsDuplicate {
 
