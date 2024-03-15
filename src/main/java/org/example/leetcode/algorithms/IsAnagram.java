@@ -7,8 +7,13 @@ public class IsAnagram {
 
     public static void main(String[] args) {
 
-        String s1 = "rat";
-        String s2 = "car";
+        // Positive case
+        String s1 = "anagram";
+        String s2 = "nagaram";
+
+        // Negative case
+        String s3 = "rat";
+        String s4 = "car";
 
         // call your methods here
 
