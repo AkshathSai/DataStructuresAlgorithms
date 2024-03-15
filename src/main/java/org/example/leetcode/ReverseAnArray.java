@@ -13,19 +13,19 @@ public class ReverseAnArray {
     public static void reverseArray(ArrayList<Integer> arr, int m)
     {
         int startIndex = m+1;
-        ArrayList<Integer> templist=new ArrayList<>();
+        ArrayList<Integer> tempList=new ArrayList<>();
 
         for(int i=arr.size()-1; i>=startIndex; i--){
-            templist.add(arr.get(i));
+            tempList.add(arr.get(i));
         }
 
-        System.out.println(templist.toString());
+        System.out.println(tempList);
         int j=0;
 
         for(int i=startIndex; i<arr.size(); i++){
-            arr.set(i, templist.get(j++));
+            arr.set(i, tempList.get(j++));
         }
 
-        System.out.println(arr.toString());
+        System.out.println(arr);
     }
 }
