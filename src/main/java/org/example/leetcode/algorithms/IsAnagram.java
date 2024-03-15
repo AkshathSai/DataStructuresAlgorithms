@@ -25,7 +25,7 @@ public class IsAnagram {
         log.info("Is Anagram? {}", isAnagramWithSortCheck(s3, s4));
     }
 
-    private static boolean isAnagramWithMap(String s1, String s2) {
+    private static boolean isAnagramWithMap(String s, String t) {
         // TODO
 
         return false;
@@ -61,18 +61,18 @@ public class IsAnagram {
     }
     
 
-    private static boolean isAnagramWithSortCheck(String s1, String s2) {
-        char[] charArray1 = s1.toCharArray();
+    private static boolean isAnagramWithSortCheck(String s, String t) {
+        char[] charArray1 = s.toCharArray();
         Arrays.sort(charArray1);
-        s1 = new String(charArray1);
-        log.info("s1 {}", s1);
+        s = new String(charArray1);
+        log.info("s1 {}", s);
 
-        char[] charArray2 = s2.toCharArray();
+        char[] charArray2 = t.toCharArray();
         Arrays.sort(charArray2);
-        s2 = new String(charArray2);
-        log.info("s2 {}", s2);
+        t = new String(charArray2);
+        log.info("s2 {}", t);
 
-        return s1.equals(s2);
+        return s.equals(t);
     }
 
 }
