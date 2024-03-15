@@ -1,4 +1,4 @@
-package org.example.leetcode;
+package org.example.leetcode.algorithms;
 
 import java.util.ArrayList;
 import java.util.List;

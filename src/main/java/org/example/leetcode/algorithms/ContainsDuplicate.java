@@ -1,4 +1,4 @@
-package org.example.leetcode;
+package org.example.leetcode.algorithms;
 
 import lombok.extern.slf4j.Slf4j;
 
