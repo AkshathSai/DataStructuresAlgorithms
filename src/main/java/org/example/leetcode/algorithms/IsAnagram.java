@@ -36,18 +36,13 @@ public class IsAnagram {
         if (s.length() != t.length()) {
             return false;
         }
+
         int arr[] = new int[26];
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = 0;
-        }
+
         char c[] = s.toCharArray();
         char c1[] = t.toCharArray();
         for (int i = 0; i < c.length; i++) {
             arr[c[i] - 'a']++;
-
-        }
-        for (int i = 0; i < c.length; i++) {
-
             arr[c1[i] - 'a']--;
         }
 
@@ -62,6 +57,11 @@ public class IsAnagram {
     
 
     private static boolean isAnagramWithSortCheck(String s, String t) {
+
+        if(s.length() != t.length()) {
+            return false;
+        }
+
         char[] charArray1 = s.toCharArray();
         Arrays.sort(charArray1);
         s = new String(charArray1);
