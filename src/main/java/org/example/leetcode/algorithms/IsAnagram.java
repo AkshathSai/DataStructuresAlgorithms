@@ -30,11 +30,33 @@ public class IsAnagram {
         return false;
     }
 
-    private static boolean isAnagramWithArray(String s1, String s2) {
-        // TODO
-
+    private static boolean isAnagramWithArray(String s, String t) {
+       
+    if(s.length()!=t.length()){
         return false;
-    }
+        }
+      int arr[]=new int[26];
+        for(int i=0;i<arr.length;i++){
+            arr[i]=0;
+        }
+     char c[]=s.toCharArray();
+     char c1[]=t.toCharArray();
+     for(int i=0;i<c.length;i++){
+        arr[c[i]-'a']++;
+
+     }
+     for(int i=0;i<c.length;i++){
+      
+        arr[c1[i]-'a']--;
+     }
+    for(int a:arr){
+        if(a!=0){
+        return false;
+        }
+         }
+    return true;
+}
+    
 
     private static boolean isAnagramWithSortCheck(String s1, String s2) {
         // TODO
