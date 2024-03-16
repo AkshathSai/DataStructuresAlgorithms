@@ -11,20 +11,20 @@ public class SequenceChecker {
         log.info("{}", isSubsequence("b", "abc"));
     }
 
-    private static boolean isSubsequence(String subSequence, String originalString) {
+    private static boolean isSubsequence(String subSequence, String inputString) {
 
-        int matches = 0;
+        int matchCount = 0;
         int i = 0;
-        for (char character: originalString.toCharArray()) {
+        for (char character: inputString.toCharArray()) {
             if (character == subSequence.charAt(i)) {
-                matches++;
+                matchCount++;
                 if (i < subSequence.length() - 1) {
                     i++; // next char in subSequence
                 }
             }
         }
 
-        return subSequence.length() == matches;
+        return subSequence.length() == matchCount;
     }
 
     private static boolean isSubsequenceV2(String subSequence, String t) {
