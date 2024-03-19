@@ -6,9 +6,11 @@ import lombok.extern.slf4j.Slf4j;
 public class SequenceChecker {
 
     public static void main(String[] args) {
+        // TODO: isSubsequence checker for repeated characters
         log.info("{}", isSubsequence("abc", "ahbgdc"));
-        log.info("{}", isSubsequence("axc", "ahbgdc"));
+        log.info("{}", isSubsequence("axc", "abhgcxd"));
         log.info("{}", isSubsequence("b", "abc"));
+        log.info("{}", isSubsequence("axc", "ahbgcxc"));
     }
 
     private static boolean isSubsequence(String subSequence, String inputString) {
