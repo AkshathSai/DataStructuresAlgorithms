@@ -154,11 +154,11 @@ public class BinarySearchTree<E extends Comparable<E>> {
 
         Node<E> currentNode = rootNode;
 
-        Queue<Node> queue = new LinkedList<>();
+        Queue<Node<E>> queue = new LinkedList<>();
         ArrayList<E> nodeList = new ArrayList<>();
         queue.add(currentNode);
 
-        while (queue.size() > 0) {
+        while (!queue.isEmpty()) {
             currentNode = queue.remove();
             nodeList.add(currentNode.getData());
             if (currentNode.getLeftChild() != null) {
@@ -241,7 +241,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
 
     public ArrayList<E> depthFirstSearchPostOrderTraversal() {
         ArrayList<E> nodes = new ArrayList<>();
-        nodes.get(0);
+        // nodes.get(0);
 
         depthFirstSearchPostOrderTraversalHelper(this.rootNode, nodes);
         /*class Traverse {
